@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Eternus Solutions",
+      "authorEmail": "esplindia@gmail.com",
+      "authorUrl": "http://eternussolutions.com"
+    }
+  }
+}
