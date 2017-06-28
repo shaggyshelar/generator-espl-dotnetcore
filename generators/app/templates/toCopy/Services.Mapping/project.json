@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "netcoreapp1.0": {
+      "imports": [
+        "dotnet5.6",
+        "dnxcore50",
+        "portable-net45+win8"
+      ]
+    }
+  },
+  "dependencies": {
+    "Data": "1.0.0-*",
+    "Models.Domain": "1.0.0-*",
+    "Models.Dto": "1.0.0-*"
+  },
+  "buildOptions": {
+    "debugType": "portable"
+  },
+  "tooling": {
+    "defaultNamespace": "Services.Mapping"
+  },
+  "configurations": {
+    "Development": {},
+    "Production": {},
+    "Staging": {}
+  }
+}

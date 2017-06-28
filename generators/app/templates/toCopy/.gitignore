@@ -1,0 +1,46 @@
+# Bin and Obj Directories#
+##########################
+[Bb]in
+[Bb]in/*
+[Oo]bj
+[Oo]bj/*
+
+# Other Solution Files #
+########################
+*.userprefs
+*.user
+*.suo
+*.lock.json
+
+# IDE files
+########################
+.idea
+.settings
+.vscode
+.vs
+node_modules
+bower_components
+tmp
+
+# Web project stuff to ignore
+########################
+src/Presentation.Web/artifacts
+src/Presentation.Web/fonts
+src/Presentation.Web/css
+src/Presentation.Web/js
+src/Presentation.Web/app/common/templates
+src/Presentation.Web/app/common/config.js
+src/Presentation.Web/index.html
+src/Presentation.Web/images/uploads
+
+# Nuget packages folder
+########################
+packages
+packages/*
+
+# Other Misc Files #
+####################
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db

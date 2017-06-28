@@ -1,0 +1,39 @@
+{
+  "version": "1.0.0-*",
+  "dependencies": {
+    "Interfaces": "1.0.0-*",
+    "NETStandard.Library": "1.6.0"
+  },
+  "frameworks": {
+    "netstandard1.6": {
+      "imports": "dnxcore50"
+    }
+  },
+  "buildOptions": {
+    "debugType": "portable"
+  },
+  //"frameworks": {
+  //  "netcoreapp1.0": {
+  //    "imports": [
+  //      "dotnet5.6",
+  //      "dnxcore50",
+  //      "portable-net45+win8"
+  //    ]
+  //  }
+  //},
+  //"dependencies": {
+  //  "NETStandard.Library": "1.5.0-rc2-24027",
+  //  "Interfaces": "1.0.0-*",
+  //  "Models.Domain": "1.0.0-*",
+  //  "Models.Dto": "1.0.0-*",
+  //  "Services": "1.0.0-*"
+  //},
+  "tooling": {
+    "defaultNamespace": "Workflows"
+  },
+  "configurations": {
+    "Development": {},
+    "Production": {},
+    "Staging": {}
+  }
+}

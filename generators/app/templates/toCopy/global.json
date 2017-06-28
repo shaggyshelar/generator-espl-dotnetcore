@@ -1,0 +1,17 @@
+{
+  "projects": [
+    "Models.Domain",
+    "Models.Dto",
+    "AppConfig",
+    "Interfaces",
+    "Data",
+    "Services",
+    "Services.Mapping",
+    "Workflows",
+    "IoC",
+    "WebApi"
+  ],
+  "sdk": {
+    "version": "1.0.0-preview2-003121"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "netcoreapp1.0": {
+      "imports": [
+        "dotnet5.6",
+        "dnxcore50",
+        "portable-net45+win8"
+      ]
+    }
+  },
+  "dependencies": {
+    "AppConfig": "1.0.0-*",
+    "Data": "1.0.0-*",
+    "Interfaces": "1.0.0-*",
+    "Models.Dto": "1.0.0-*",
+    "Models.Domain": "1.0.0-*",
+    "Services.Mapping": "1.0.0-*",
+    "MailKit": "1.4.1",
+    "System.Linq.Dynamic.Core": "1.0.6"
+  },
+  "buildOptions": {
+    "debugType": "portable"
+  },
+  "tooling": {
+    "defaultNamespace": "Services"
+  },
+  "configurations": {
+    "Development": {},
+    "Production": {},
+    "Staging": {}
+  }
+}

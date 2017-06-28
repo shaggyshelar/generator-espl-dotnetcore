@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0-*",
+  "dependencies": {
+    "NETStandard.Library": "1.6.0",
+    "Models.Domain": "1.0.0-*",
+    "Models.Dto": "1.0.0-*"
+  },
+  "frameworks": {
+    "netstandard1.6": {
+      "imports": "dnxcore50"
+    }
+  },
+  "buildOptions": {
+    "debugType": "portable"
+  },
+  "tooling": {
+    "defaultNamespace": "Interfaces"
+  },
+  "configurations": {
+    "Development": {},
+    "Production": {},
+    "Staging": {}
+  }
+}
