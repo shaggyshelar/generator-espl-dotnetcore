@@ -11,10 +11,16 @@ module.exports = class extends Generator {
     ));
 
     const prompts = [{
-      type: 'confirm',
-      name: 'someAnswer',
-      message: 'Would you like to enable this option?',
-      default: true
+      type: 'list',
+      name: 'list1',
+      message: 'List 1 options',
+      choices: [{name: 'jumbo'}, {name: 'tumbo', default: true}, {name: 'numbo'}]
+    },
+    {
+      type: 'checkbox',
+      name: 'list2',
+      message: 'List 1 options',
+      choices: [{name: 'jumbo'}, {name: 'tumbo', checked: true, default: true}, {name: 'numbo', checked: true}]
     }];
 
     return this.prompt(prompts).then(props => {
@@ -24,13 +30,8 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    this.fs.copy(
-      this.templatePath('dummyfile.txt'),
-      this.destinationPath('dummyfile.txt')
-    );
   }
 
   install() {
-    this.installDependencies();
   }
 };

@@ -25,14 +25,46 @@ module.exports = class extends Generator {
         default: 'WebApi'
       },
       {
-        type: 'confirm',
-        name: 'useSrcDirectory',
-        message: 'Would you like the solution files to be in a "src" directory?',
-        default: false
+        type: 'checkbox',
+        name: 'projectOptions',
+        message: 'Please select what you want to include in this project.',
+        choices: [
+          { name: 'Enable Microsoft Identity?', checked: true, value: 'enableIdentity'  },
+          { name: 'Enable CORS?', checked: true, value: 'enableCORS'  },
+          { name: 'Enable Node Service?', checked: true, value: 'enableNodeService'  },
+          { name: 'Enable Rate Limiting Rules?', checked: true, value: 'enableRateLimiting'  },
+          { name: 'Enable Static Files?', checked: true, value: 'enableStaticFiles'  },
+          { name: 'Enable PDF Export?', checked: true, value: 'enablePDFExport'  },
+          { name: 'Enable Excel Export?', checked: true, value: 'enableExcelExport'  },
+          { name: 'Enbable Memory Cache?', checked: true, value: 'enableMomoryCache'  },
+          { name: 'Enbable Localization?', checked: true, value: 'enableLocalization'  },
+          { name: 'Enbable Sample Data?', checked: false, value: 'enableSampleData'  }
+        ]
+      },
+      {
+        type: String,
+        name: 'tokenIssuer',
+        message: 'Please enter token issuer',
+        default: 'http://example.com',
+        require: true
+      },
+      {
+        type: String,
+        name: 'tokenAudience',
+        message: 'Please enter token audience',
+        default: 'http://example.com',
+        require: true
+      },
+      {
+        type: String,
+        name: 'connectionStrings',
+        message: 'Please enter connection strings',
+        default: 'Server=.\\SQLExpress;Database=dbName;Trusted_Connection=True;',
+        require: true
       }];
 
     return this.prompt(prompts).then(function (args) {
-      var srcDirectory = (args.useSrcDirectory) ? 'src' : '';
+      var srcDirectory = '';
 
       this.config.set('appName', args.appName);
       this.config.set('srcDirectory', srcDirectory);
@@ -54,11 +86,11 @@ module.exports = class extends Generator {
       { srcDirectory: '' }
     );
 
-    // Copy everything else in
-    this.fs.copy(
-      this.templatePath('toCopy/**/*'),
-      this.destinationPath(this.args.srcDirectory)
-    );
+    // // Copy everything else in
+    // this.fs.copy(
+    //   this.templatePath('toCopy/**/*'),
+    //   this.destinationPath(this.args.srcDirectory)
+    // );
   }
 
   install() {
